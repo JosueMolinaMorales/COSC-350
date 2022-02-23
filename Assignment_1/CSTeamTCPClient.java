@@ -15,11 +15,30 @@ public class CSTeamTCPClient {
             dout.writeUTF("Hello Server");
             dout.flush();
             
+            // Accept the web server name from the server
+            DataInputStream serverInput = new DataInputStream(socket.getInputStream());
+            String webPage = (String)serverInput.readUTF();
+            System.out.println("Webpage sent from the server: " + webPage);
+
+            // Connect to the webpage that was sent from the server
+            System.out.printf("Connecting to %s\n", webPage);
+            
+            // Make a HTTP GET request to the web page
+            URL url = new URL(webPage);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            InputStream webPageInput = connection.getInputStream();
+
+            byte[] input = webPageInput.readAllBytes();
+            System.out.println("Size: " + input.length);
+            System.out.println(new String(input));
+            
+
             dout.close();
             socket.close();
-        
+
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
     

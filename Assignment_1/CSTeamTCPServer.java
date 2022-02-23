@@ -16,6 +16,12 @@ public class CSTeamTCPServer {
             String str = (String)dis.readUTF();
             System.out.println("message from client is: " + str);
             
+            // Send client a web server name
+            DataOutputStream toClient = new DataOutputStream(clientSocket.getOutputStream());
+            toClient.writeUTF("https://github.com");
+            toClient.flush();
+
+            toClient.close();
             serverSocket.close();
         
         }catch(Exception e){
