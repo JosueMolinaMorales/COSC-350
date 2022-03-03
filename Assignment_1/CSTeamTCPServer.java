@@ -10,7 +10,7 @@ public class CSTeamTCPServer {
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter a webpage to make a GET request to: ");
             String userWebPage = scan.nextLine();
-            
+
             // Create a socket object bound to port 6789
             ServerSocket serverSocket = new ServerSocket(6789);
 

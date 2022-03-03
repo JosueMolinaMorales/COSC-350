@@ -1,3 +1,3 @@
 
 javac CSTeamTCPServer.java
-java CSTeamTCPServer
+java CSTeamTCPServer "www.towson.edu"
