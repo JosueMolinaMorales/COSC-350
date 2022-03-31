@@ -2,14 +2,19 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Checksum {
-    public static final String FILE = "hex.txt";
+    public static final String FILE = "HexPacketWS.txt";
     public static void main(String[] args) {
         try {
             Scanner scan = new Scanner(new File(FILE));
             String hex = "";
-            
+            String[] tokens;
+
             while (scan.hasNext()) {
-                hex += scan.nextLine();
+                tokens = scan.nextLine().split(" ");
+
+                for(int i = 1; i < tokens.length; i++) {
+                    hex += !tokens[i].isBlank() ? tokens[i] : "";
+                }
             }
 
             if (hex.length() % 4 != 0 ) {
@@ -17,7 +22,12 @@ public class Checksum {
                     hex += "0";
                 }
             }
-            computeChecksum(hex);
+            int sum = computeChecksum(hex);
+            // System.out.println("Sum is: " + sum + " In Binary: " + Integer.toBinaryString(sum));
+            // System.out.println(hex);
+            verifyChecksum(hex, sum); // This should be valid
+            //System.out.println("\n\n\n" + hex.replace('a', '0'));
+            verifyChecksum(hex.replace('a', '0'), sum); // This should be invalid
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -28,7 +38,7 @@ public class Checksum {
      * 
      * @param hex
      */
-    public static void computeChecksum(String hex) {
+    public static int computeChecksum(String hex) {
         int sum = 0;
         final int MOD = (int)Math.pow(2, 8);
         for (int i = 0; i < hex.length()-2; i++) {
@@ -38,9 +48,10 @@ public class Checksum {
         System.out.println("Sum is: " + sum + " In Binary: " + Integer.toBinaryString(sum));
         System.out.println("One's Complement is: " + (~sum) + " In Binary: " + Integer.toBinaryString(~sum));
         System.out.println("SUM: " + Integer.toBinaryString(sum+ (~sum)));
+        return sum;
     }
 
-    public static void verifyChecksum(String hex) {
-        
+    public static void verifyChecksum(String hex, int checksum) {
+        System.out.println((~checksum+computeChecksum(hex) == -1) ? "Checksum is valid" : "Checksum is not valid");
     }
 }
