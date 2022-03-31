@@ -39,4 +39,8 @@ public class Checksum {
         System.out.println("One's Complement is: " + (~sum) + " In Binary: " + Integer.toBinaryString(~sum));
         System.out.println("SUM: " + Integer.toBinaryString(sum+ (~sum)));
     }
+
+    public static void verifyChecksum(String hex) {
+        
+    }
 }
