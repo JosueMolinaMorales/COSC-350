@@ -27,7 +27,7 @@ public class Checksum {
             // System.out.println(hex);
             verifyChecksum(hex, sum); // This should be valid
             //System.out.println("\n\n\n" + hex.replace('a', '0'));
-            verifyChecksum(hex.replace('a', '0'), sum); // This should be invalid
+            verifyChecksum(hex.replaceFirst("a","0"), sum); // This should be invalid
         } catch (Exception e) {
             e.printStackTrace();
         }
