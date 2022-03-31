@@ -6,7 +6,11 @@ public class Checksum {
     public static void main(String[] args) {
         try {
             Scanner scan = new Scanner(new File(FILE));
-            String hex = scan.nextLine();
+            String hex = "";
+            
+            while (scan.hasNext()) {
+                hex += scan.nextLine();
+            }
 
             if (hex.length() % 4 != 0 ) {
                 for (int i = 0; i < 4-(hex.length()%4); i++) {
@@ -25,15 +29,14 @@ public class Checksum {
      * @param hex
      */
     public static void computeChecksum(String hex) {
-        long sum = 0;
-        final int MOD = (int)Math.pow(2, 16);
+        int sum = 0;
+        final int MOD = (int)Math.pow(2, 8);
         for (int i = 0; i < hex.length()-2; i++) {
             sum += Integer.parseInt(hex.substring(i, i+2), 16); 
-            System.out.printf("%d MOD %d\n", sum, MOD);
             sum = (sum > MOD) ? (sum%MOD) + 1 : sum;
         }
-        System.out.println("Sum is: " + sum);
-        System.out.println("One's Complement is: " + (~sum));
-        System.out.println("SUM: " + (sum+ (~sum)));
+        System.out.println("Sum is: " + sum + " In Binary: " + Integer.toBinaryString(sum));
+        System.out.println("One's Complement is: " + (~sum) + " In Binary: " + Integer.toBinaryString(~sum));
+        System.out.println("SUM: " + Integer.toBinaryString(sum+ (~sum)));
     }
 }
