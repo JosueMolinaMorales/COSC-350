@@ -2,6 +2,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+/**
+ * This class computes the check some for the encrypted file HexPacketWS_CheckSum.txt
+ * and writes out to HexPacketWS_CheckSum.txt
+ */
 public class Checksum {
     public static final String FILE = "HexPacketWS.txt";
     public static final String OUT_FILE = "HexPacketWS_CheckSum.txt";
@@ -19,7 +23,6 @@ public class Checksum {
             while (scan.hasNext()) {
                 input = scan.nextLine();
                 tokens = input.split(" ");
-                
                 
                 for(int i = 1; i < tokens.length; i++) {
                     hex += !tokens[i].isBlank() ? tokens[i] : "";
@@ -73,6 +76,7 @@ public class Checksum {
      * @param checksum The sum calculated by the sender
      */
     public static void verifyChecksum(String hex, int checksum) {
+        // System.out.println(Integer.toHexString(~checksum+computeChecksum(hex))); //uncomment to see all f's or not
         System.out.println((~checksum+computeChecksum(hex) == -1) ? "Checksum is valid" : "Checksum is not valid");
     }
 }
