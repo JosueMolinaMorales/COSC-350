@@ -1,6 +1,10 @@
 import java.io.File;
 import java.util.Scanner;
 
+/**
+ * Computes the Checksum from file "HexPacketWS.txt"
+ * Josue Molina Morales & Adam Weiss
+ */
 public class Checksum {
     public static final String FILE = "HexPacketWS.txt";
     public static void main(String[] args) {
