@@ -3,8 +3,8 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 /**
- * This class computes the check some for the encrypted file HexPacketWS_CheckSum.txt
- * and writes out to HexPacketWS_CheckSum.txt
+ * Computes the Checksum from file "HexPacketWS.txt"
+ * Josue Molina Morales & Adam Weiss
  */
 public class Checksum {
     public static final String FILE = "HexPacketWS.txt";
