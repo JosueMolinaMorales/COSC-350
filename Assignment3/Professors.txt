@@ -15,7 +15,7 @@ sacharya AT_TOWSON
 YR-461
 
 
-Ali-Gombe, 
+Ali-Gombe,Â 
 Aisha
 Assistant Professor
 Malware Analysis, System Security, Privacy Policy Techniques in Mobile Applications,
@@ -28,7 +28,7 @@ YR-422
 
 
 Alkharouf, Nadim
-Professor & MB3 Undergraduate Director
+ProfessorÂ & MB3 Undergraduate Director
 Bioinformatics, Design and Development of Database Management Systems and Data Mining
                                  Tools
                               
@@ -124,12 +124,12 @@ YR-464
 
 Downing-Harris, Terry
 Lecturer
-Software Engineering, 
-Systems Analyst, 
-Information Technology, 
-Information Systems, 
-Database Management System development, 
-IT Management, 
+Software Engineering,Â 
+Systems Analyst,Â 
+Information Technology,Â 
+Information Systems,Â 
+Database Management System development,Â 
+IT Management,Â 
 Programming Languages
 tdowningharris AT_TOWSON
 (410) 704-4662
@@ -296,15 +296,15 @@ YR-317
 
 Pak, Jinie
 Clinical Associate Professor
-Intelligence and Security Informatics, Social Network Analysis, Computational Linguistics, Computer
-                                 Supported Cooperative Works (CSCW), Human-Computer Interaction
+Intelligence and Security Informatics, Social Network Analysis, Computational Linguistics,Â Computer
+                                 Supported Cooperative Works (CSCW),Â Human-Computer Interaction
                               
 jpak AT_TOWSON
 (410) 704-3873
 YR-468
 
 
-Saeedloei, Neda
+Saeedloei,Â Neda
 Assistant Professor
 Formal Methods; Model-based Design, Specification and Verification of Cyber-physical
                                  Systems, Models of Computation, Logic in Computer Science
@@ -316,7 +316,7 @@ YR-455
 
 Sanders, Willie
 Clinical Assistant Professor
-Systems Administration, Forensics 
+Systems Administration, ForensicsÂ 
 wsanders AT_TOWSON
 YR-456
 
@@ -413,7 +413,7 @@ izimand AT_TOWSON
 YR-441
 
 
-Zimand, Marius
+Zimand,Â Marius
 Professor
 Computational Complexity, Algorithms, Cryptography
 mzimand AT_TOWSON
@@ -475,7 +475,7 @@ YR 414
 ENDFull Time Staff
 
 Faculty Emeriti
-Name and  Education
+Name and Â Education
 Expertise
 
 

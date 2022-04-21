@@ -1,5 +1,4 @@
 import requests
-from HtmlParser import HtmlParser
 from bs4 import BeautifulSoup
 from html.parser import HTMLParser
 
@@ -22,7 +21,7 @@ class HtmlParser(HTMLParser):
 
     def handle_data(self, data: str) -> None:
         if not data.isspace() and self.lasttag in ['p', 'strong', 'a', 'td', 'b', 'span']:
-                outFile.write(data + "\n")
+            outFile.write(data + "\n")
 
     def feed(self, data: str) -> None:
         return super().feed(data)
