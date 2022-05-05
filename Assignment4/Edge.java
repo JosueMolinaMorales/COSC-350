@@ -2,6 +2,11 @@ public class Edge {
     private double weight;
     private GNode destVertex;
 
+    /**
+     * Create an Edge
+     * @param dest
+     * @param weight
+     */
     public Edge(GNode dest, double weight) {
         this.destVertex = dest;
         this.weight = weight;
